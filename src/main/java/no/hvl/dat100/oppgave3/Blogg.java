@@ -49,21 +49,27 @@ public class Blogg {
 	}
 
 	public boolean ledigPlass() {
-//		if (nesteLedig < innlegg.length) {
-//			return true;
-//		} else 
-//			return false;
-//		
 		return nesteLedig < innlegg.length;
 	}
 
 	public boolean leggTil(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
+		if (ledigPlass() && !finnes(innlegg)) {
+			this.innlegg[nesteLedig] = innlegg;
+			nesteLedig++;
+			return true;
+		}
+		return false;
 		
 	}
 
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
+		 StringBuilder sb = new StringBuilder();
+		    sb.append(nesteLedig).append("\n");
+		    
+		    for (int i = 0; i < nesteLedig; i++) {
+		    	sb.append(innlegg[i].toString()).append("\n");
+		    }
+		    return sb.toString();   
 	}
 
 	// valgfrie oppgaver nedenfor

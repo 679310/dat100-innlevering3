@@ -45,7 +45,7 @@ public class Tekst extends Innlegg {
 		String likestxt = getLikes() + "";
 		String teksttxt = getTekst();
 		
-		String str = "TEKST" + "\n" + idtxt + "\n" + brukertxt + "\n" + datotxt + "\n" + likestxt + "\n" + teksttxt + "\n";
+		String str = "TEKST\n" + idtxt + "\n" + brukertxt + "\n" + datotxt + "\n" + likestxt + "\n" + teksttxt + "\n";
 		
 		return str;
 
