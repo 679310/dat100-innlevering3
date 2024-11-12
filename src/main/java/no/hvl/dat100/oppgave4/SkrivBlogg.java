@@ -17,12 +17,12 @@ public class SkrivBlogg {
         try  {
         	File file = new File(filsti);
         	writer = new PrintWriter(file);
-            writer.write(samling.toString());  // Skriver samlingen til fil
+            writer.write(samling.toString());  
             writer.close();
-            return true;  // Returnerer true hvis filen ble skrevet uten problemer
+            return true;  
         } catch (FileNotFoundException e) {
             System.err.println("Feil under skriving til fil: " + e.getMessage());
-              // Returnerer false ved feil
+              
         }
         return false;
 		
